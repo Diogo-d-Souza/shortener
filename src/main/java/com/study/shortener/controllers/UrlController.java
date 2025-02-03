@@ -22,8 +22,8 @@ public class UrlController {
         return ResponseEntity.ok(urlResponse);
     }
 
-    @GetMapping("/{shorten-url}")
-    public ResponseEntity shortenUrl(@PathVariable("shorten-url") String shortenUrl) {
-        return urlService.getOriginalUrl(shortenUrl);
+    @GetMapping("/{shorten-id}")
+    public ResponseEntity shortenUrl(@PathVariable("shorten-id") String shortenId) {
+        return urlService.getOriginalUrl(shortenId);
     }
 }
