@@ -25,7 +25,7 @@ public class UrlService {
     }
 
     public UrlResponse shortenUrl(UrlRequest urlRequest, HttpServletRequest request) {
-        String id = genId(urlRequest.url());
+        String id = genIdAndSave(urlRequest.url());
         String redirectUrl = request.getRequestURL().toString().replace("shorten-url", id);
         return new UrlResponse(redirectUrl);
     }
@@ -40,7 +40,7 @@ public class UrlService {
         return  ResponseEntity.notFound().build();
     }
 
-    private String genId(String url) {
+    private String genIdAndSave(String url) {
         String id;
         Url newUrl = new Url();
 
@@ -50,7 +50,7 @@ public class UrlService {
 
         newUrl.setId(id);
         newUrl.setUrl(url);
-        newUrl.setExpiresAt(LocalDateTime.now().plusMinutes(1));
+        newUrl.setExpiresAt(LocalDateTime.now().plusMinutes(30));
         urlRepository.save(newUrl);
 
         return id;
