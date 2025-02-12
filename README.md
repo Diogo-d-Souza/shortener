@@ -1,7 +1,7 @@
 # URL Shortener
 
 ## 📌 Project Overview
-This project is a **URL Shortener API** built using **Spring Boot** and **MongoDB**. It allows users to shorten long URLs and be redirected to the original URL using the generated short id.
+This project is a **URL Shortener Application** built using **Spring Boot** and **MongoDB**. It allows users to shorten long URLs and be redirected to the original URL using the generated short id.
 
 ## 🛠️ Tech Stack
 - **Java 21**
@@ -15,8 +15,8 @@ This project is a **URL Shortener API** built using **Spring Boot** and **MongoD
 
 ### Clone the Repository**
 ```sh
-git clone https://github.com/Diogo-d-Souza/shortener-api.git
-cd shortener-api
+git clone https://github.com/Diogo-d-Souza/shortener.git
+cd shortener
 ```
 
 ### Build and Run the Docker Container**
