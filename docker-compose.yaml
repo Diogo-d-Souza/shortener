@@ -1,7 +1,7 @@
 services:
   api:
     container_name: shortener_api
-    build: .
+    build: ./back-end/
     ports:
       - "8080:8080"
     depends_on:
