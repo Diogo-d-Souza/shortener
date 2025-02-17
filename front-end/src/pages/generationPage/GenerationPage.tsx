@@ -11,7 +11,7 @@ export default function GenerationPage(){
 
   const handleClick = async () => {
     if (!urlToBeShortened.url) {
-      toast.error("Something went wrong!", { position: "top-right", autoClose: 2000 });
+      toast.error("You must provide an URL!", { position: "top-right", autoClose: 2000 });
     } else {
       try {
         const { data } = await api.post("shorten-url", urlToBeShortened)
