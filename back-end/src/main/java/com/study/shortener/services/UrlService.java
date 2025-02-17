@@ -50,7 +50,7 @@ public class UrlService {
 
         newUrl.setId(id);
         newUrl.setUrl(url);
-        newUrl.setExpiresAt(LocalDateTime.now().plusMinutes(30));
+        newUrl.setExpiresAt(LocalDateTime.now().plusHours(24));
         urlRepository.save(newUrl);
 
         return id;
