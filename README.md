@@ -43,6 +43,8 @@ docker compose down -v
 
 ---
 
+## 🌐 Frontend Endpoint (localhost:8081)
+
 ## 📡 API Endpoints
 
 | Method | Endpoint        | Description                   |
