@@ -24,7 +24,7 @@ services:
     container_name: shortener_nginx
     build: ./nginx
     ports:
-      - 8081:80
+      - ${NGINX_PORT}:80
     volumes:
       - frontend_volume:/var/www/html
     depends_on:
