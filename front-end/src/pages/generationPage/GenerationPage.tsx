@@ -9,6 +9,15 @@ export default function GenerationPage(){
   const [urlToBeShortened, setUrlToBeShortened] = useState<IUrlShortener>({ url: ""});
   const [urlResponseData, setUrlResponseData] = useState<IUrlShortener>({ url: ""});
 
+  const copyToClipboard = (text: string) => {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+  }
+
   const handleClick = async () => {
     if (!urlToBeShortened.url) {
       toast.error("You must provide an URL!", { position: "top-right", autoClose: 2000 });
@@ -28,7 +37,7 @@ export default function GenerationPage(){
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(urlResponseData.url);
+    copyToClipboard(urlResponseData.url);
     toast.success("URL copied to clipboard!", { position: "top-right", autoClose: 2000 });
   };
 
