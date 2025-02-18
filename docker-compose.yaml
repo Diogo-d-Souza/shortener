@@ -31,6 +31,8 @@ services:
       - mongodb
       - api
       - frontend
+    networks:
+      - shortener_network
   mongodb:
     container_name: shortener_db
     image: mongo

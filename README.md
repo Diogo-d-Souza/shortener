@@ -2,21 +2,16 @@
 
 ## 📌 Project Overview
 
-This project is a **URL Shortener Application** built using **Spring Boot** and **MongoDB**. It allows users to shorten long URLs and be redirected to the original URL using the generated short id.
+This project is a **URL Shortener Application** built using **React**, **Spring Boot** and **MongoDB**. It allows users to shorten long URLs and be redirected to the original URL using the generated short id.
 
 ## 🛠️ Tech Stack
 
-### Backend
-
-- **Java 21**
-- **Spring Boot**
+- **Java & Spring Boot**
+- **Typescript & React**
 - **MongoDB**
+- **Nginx & Reverse proxy**
+- **AWS EC2**
 - **Docker & Docker Compose**
-
-### Frontend
-
-- **Typescript**
-- **React.JS**
 
 ---
 
@@ -43,7 +38,10 @@ docker compose down -v
 
 ---
 
-## 🌐 Frontend Endpoint (localhost:8081)
+## 🌐 Frontend Endpoints
+
+- **Localhost: http://localhost:8081**
+- **Deploy: http://18.234.161.155/** or **http://ec2-18-234-161-155.compute-1.amazonaws.com/**
 
 ## 📡 API Endpoints
 
@@ -54,5 +52,5 @@ docker compose down -v
 
 ---
 
-This **URL Shortener** was a simple project to practice **Spring Boot, MongoDB, and Docker**.
+This **URL Shortener** was a simple project to practice **Docker, Nginx** and **AWS EC2**.
 Feel free to leave a feedback or modify it as needed!
