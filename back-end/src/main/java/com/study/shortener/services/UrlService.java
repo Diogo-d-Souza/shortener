@@ -26,7 +26,7 @@ public class UrlService {
 
     public UrlResponse shortenUrl(UrlRequest urlRequest, HttpServletRequest request) {
         String id = genIdAndSave(urlRequest.url());
-        String redirectUrl = request.getRequestURL().toString().replace("shorten-url", id);
+        String redirectUrl = request.getRequestURL().toString().replace("shorten-url", "api/" + id);
         return new UrlResponse(redirectUrl);
     }
 
